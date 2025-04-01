@@ -1,0 +1,66 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      image-tag:
+        description: Image tag to run
+        type: string
+      ref:
+        description: Ref to deploy
+        type: string
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+env:
+  WORKING_DIR: ${{ github.workspace }}/apps/autobutler.ai
+  REF: ${{ inputs.ref || 'main' }}
+defaults:
+  run:
+    shell: bash
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    container:
+      image: exokomodo/exoflow-devcontainer:${{ inputs.image-tag || 'latest' }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          repository: exokomodo/exoflow
+          ref: ${{ env.REF }}
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+        with:
+          static_site_generator: nuxt
+      - name: Install dependencies
+        working-directory: ${{ env.WORKING_DIR }}
+        run: |
+          bun install
+      - name: Static HTML export with Nuxt
+        working-directory: ${{ env.WORKING_DIR }}
+        run: |
+          bun run generate
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.WORKING_DIR }}/dist
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
+    needs:
+      - package
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
