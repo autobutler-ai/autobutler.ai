@@ -35,6 +35,7 @@ jobs:
         with:
           repository: exokomodo/exoflow
           ref: ${{ env.REF }}
+          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
