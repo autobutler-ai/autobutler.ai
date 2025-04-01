@@ -58,21 +58,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-  pass-autobutler-org-cd:
-    runs-on: ubuntu-latest
-    if: always()
-    needs:
-      - package
-      - deploy
-    env:
-      RESULT: ${{ (needs.package.result == 'failure' || needs.package.result == 'failure') && 'failure' || 'success' }}
-    steps:
-      - name: Pass
-        if: ${{ env.RESULT != 'failure' }}
-        run: |
-          echo "[PASS] Linting" >> ${GITHUB_STEP_SUMMARY}
-      - name: Fail
-        if: ${{ env.RESULT == 'failure' }}
-        run: |
-          echo "[FAIL] Linting" >> ${GITHUB_STEP_SUMMARY}
-          exit 1
