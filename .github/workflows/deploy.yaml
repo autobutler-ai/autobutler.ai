@@ -1,4 +1,4 @@
-name: autobutler.ai - CD
+name: Deploy
 on:
   push:
     branches:
@@ -48,6 +48,7 @@ jobs:
           path: ${{ env.WORKING_DIR }}/dist
   deploy:
     runs-on: ubuntu-latest
+    if: ${{ github.ref == 'refs/heads/main' }}
     needs:
       - package
     environment:
@@ -74,3 +75,4 @@ jobs:
         if: ${{ env.RESULT == 'failure' }}
         run: |
           echo "[FAIL] Linting" >> ${GITHUB_STEP_SUMMARY}
+          exit 1
