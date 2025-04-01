@@ -11,8 +11,6 @@ on:
       ref:
         description: Ref to deploy
         type: string
-  schedule:
-    - cron: '00 00 * * *'
 permissions:
   contents: read
   pages: write
