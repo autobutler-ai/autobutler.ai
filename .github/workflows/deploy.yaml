@@ -8,6 +8,9 @@ on:
       image-tag:
         description: Image tag to run
         type: string
+      ref:
+        description: Ref to deploy
+        type: string
 permissions:
   contents: read
   pages: write
@@ -17,6 +20,7 @@ concurrency:
   cancel-in-progress: false
 env:
   WORKING_DIR: ${{ github.workspace }}/apps/autobutler.ai
+  REF: ${{ inputs.ref || 'main' }}
 defaults:
   run:
     shell: bash
@@ -30,6 +34,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: exokomodo/exoflow
+          ref: ${{ env.REF }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
