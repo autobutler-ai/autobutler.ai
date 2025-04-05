@@ -19,7 +19,7 @@ concurrency:
   group: pages
   cancel-in-progress: false
 env:
-  WORKING_DIR: ${{ github.workspace }}/apps/autobutler.ai
+  WORKING_DIR: ${{ github.workspace }}/src/autobutler.ai
   REF: ${{ inputs.ref || 'main' }}
 defaults:
   run:
