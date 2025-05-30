@@ -40,6 +40,10 @@ jobs:
         uses: actions/configure-pages@v5
         with:
           static_site_generator: nuxt
+      - name: Install node-gyp
+        working-directory: ${{ env.WORKING_DIR }}
+        run: |
+          bun install node-gyp
       - name: Install dependencies
         working-directory: ${{ env.WORKING_DIR }}
         run: |
