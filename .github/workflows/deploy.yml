@@ -19,7 +19,7 @@ concurrency:
   group: pages
   cancel-in-progress: false
 env:
-  WORKING_DIR: ${{ github.workspace }}/src/autobutler.ai/ui
+  WORKING_DIR: ${{ github.workspace }}/src/dotai/ui
   REF: ${{ inputs.ref || 'main' }}
 defaults:
   run:
