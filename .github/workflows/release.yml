@@ -7,7 +7,7 @@ on:
         type: string
         required: true
 env:
-  WORKING_DIR: ${{ github.workspace }}/src/autobutler/backend
+  WORKING_DIR: ${{ github.workspace }}/src/autobutler
 defaults:
   run:
     shell: bash
