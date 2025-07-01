@@ -1,6 +1,35 @@
 # [`autobutler.ai`](https://autobutler.ai)
 
-## Setup
+## Bun
+
+### Setup
+
+```bash
+make setup/js
+```
+
+### Development Server
+
+Start the development server on `http://localhost:3000`:
+
+```bash
+bun run dev
+# or
+make run
+```
+
+### Production
+
+Build the application for production:
+
+```bash
+bun run generate
+npx serve .output/public
+```
+
+## NVM
+
+### Setup
 
 ```bash
 nvm install
@@ -8,7 +37,7 @@ nvm use
 npm install
 ```
 
-## Development Server
+### Development Server
 
 Start the development server on `http://localhost:3000`:
 
@@ -16,11 +45,11 @@ Start the development server on `http://localhost:3000`:
 npm run dev
 ```
 
-## Production
+### Production
 
 Build the application for production:
 
 ```bash
-npm run build
-npm run deploy
+npm run generate
+npx serve .output/public
 ```
