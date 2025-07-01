@@ -11,7 +11,7 @@ defaults:
   run:
     shell: bash
 jobs:
-  dotai-ci:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
