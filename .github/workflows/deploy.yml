@@ -4,13 +4,6 @@ on:
     branches:
       - main
   workflow_dispatch:
-    inputs:
-      image-tag:
-        description: Image tag to run
-        type: string
-      ref:
-        description: Ref to deploy
-        type: string
 permissions:
   contents: read
   pages: write
@@ -18,9 +11,6 @@ permissions:
 concurrency:
   group: pages
   cancel-in-progress: false
-env:
-  WORKING_DIR: ${{ github.workspace }}/src/dotai/ui
-  REF: ${{ inputs.ref || 'main' }}
 defaults:
   run:
     shell: bash
@@ -30,10 +20,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          repository: autobutler-ai/autobutler
-          ref: ${{ env.REF }}
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
       - name: Setup bun
         uses: oven-sh/setup-bun@v2
       - name: Setup Pages
@@ -41,21 +27,18 @@ jobs:
         with:
           static_site_generator: nuxt
       - name: Install node-gyp
-        working-directory: ${{ env.WORKING_DIR }}
         run: |
           bun install node-gyp
       - name: Install dependencies
-        working-directory: ${{ env.WORKING_DIR }}
         run: |
           bun install
       - name: Static HTML export with Nuxt
-        working-directory: ${{ env.WORKING_DIR }}
         run: |
           bun run generate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.WORKING_DIR }}/.output/public
+          path: .output/public
   deploy:
     runs-on: ubuntu-latest
     if: ${{ github.ref == 'refs/heads/main' }}
