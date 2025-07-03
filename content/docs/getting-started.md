@@ -26,15 +26,15 @@ Once downloaded, you can extract the binary and run the `install` command with y
 API key, and `sudo` privileges.
 
 ```bash
-API_KEY=your-api-key
-sudo /path/to/autobutler install $API_KEY
+API_KEY="your-api-key"
+sudo /path/to/autobutler install ${API_KEY}
 ```
 
 If you wish to install it via `curl`, you can run the following command:
 
 ```bash
 API_KEY="your-api-key"
-VERSION="v0.0.0"
+VERSION="v0.0.1"
 OS="$(uname -s)"
 ARCH="$(uname -m)"
 curl \
@@ -48,7 +48,7 @@ or if you prefer to use `wget`, you can run:
 
 ```bash
 API_KEY="your-api-key"
-VERSION="v0.0.0"
+VERSION="v0.0.1"
 OS="$(uname -s)"
 ARCH="$(uname -m)"
 wget \
