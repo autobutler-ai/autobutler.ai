@@ -6,10 +6,6 @@
 
 <script setup lang="ts">
 // Makes sure the markdown pages are rendered before the generation is done
-prerenderRoutes([
-  "/docs/getting-started",
-  "/docs/help",
-  "/docs/welcome",
-]);
+prerenderRoutes(["/docs/getting-started", "/docs/help", "/docs/welcome"]);
 await navigateTo("/docs/welcome");
 </script>

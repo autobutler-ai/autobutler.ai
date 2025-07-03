@@ -21,7 +21,7 @@ body:
         - UI
         - LLM
     validations:
-      required: true  
+      required: true
   - type: textarea
     id: whaddaya-want
     attributes:

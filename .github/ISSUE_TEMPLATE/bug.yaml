@@ -21,7 +21,7 @@ body:
         - LLM
       default: 0
     validations:
-      required: true  
+      required: true
   - type: textarea
     id: what-happened
     attributes:
