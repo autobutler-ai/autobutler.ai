@@ -33,23 +33,28 @@ sudo /path/to/autobutler install $API_KEY
 If you wish to install it via `curl`, you can run the following command:
 
 ```bash
-API_KEY=your-api-key
-VERSION=v0.0.0
+API_KEY="your-api-key"
+VERSION="v0.0.0"
+OS="$(uname -s)"
+ARCH="$(uname -m)"
 curl \
   --fail \
-  -L "https://github.com/exokomodo/autobutler.ai/releases/download/${VERSION}/autobutler_darwin_arm64.tar.gz" | tar -xv
-sudo ./autobutler install $API_KEY
+  -L \
+  "https://github.com/exokomodo/autobutler.ai/releases/download/${VERSION}/autobutler_${OS}_${ARCH}.tar.gz" | tar -xv
+sudo ./autobutler install "${API_KEY}"
 ```
 
 or if you prefer to use `wget`, you can run:
 
 ```bash
-API_KEY=your-api-key
-VERSION=v0.0.0
+API_KEY="your-api-key"
+VERSION="v0.0.0"
+OS="$(uname -s)"
+ARCH="$(uname -m)"
 wget \
   -qO- \
-  "https://github.com/exokomodo/autobutler.ai/releases/download/${VERSION}/autobutler_darwin_arm64.tar.gz" | tar -xv
-sudo ./autobutler install $API_KEY
+  "https://github.com/exokomodo/autobutler.ai/releases/download/${VERSION}/autobutler_${OS}_${ARCH}.tar.gz" | tar -xv
+sudo ./autobutler install "${API_KEY}"
 ```
 
 Autobutler should now be running in the background, and you can check it out at [http://localhost:8081](http://localhost:8081).
