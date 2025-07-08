@@ -40,7 +40,7 @@ ARCH="$(uname -m)"
 curl \
   --fail \
   -L \
-  "https://github.com/exokomodo/autobutler.ai/releases/download/${VERSION}/autobutler_${OS}_${ARCH}.tar.gz" | tar -xv
+  "https://github.com/exokomodo/autobutler.ai/releases/download/${VERSION}/autobutler_${OS}_${ARCH}.tar.gz" | tar -xvz
 sudo ./autobutler install "${API_KEY}"
 ```
 
@@ -53,7 +53,7 @@ OS="$(uname -s)"
 ARCH="$(uname -m)"
 wget \
   -qO- \
-  "https://github.com/exokomodo/autobutler.ai/releases/download/${VERSION}/autobutler_${OS}_${ARCH}.tar.gz" | tar -xv
+  "https://github.com/exokomodo/autobutler.ai/releases/download/${VERSION}/autobutler_${OS}_${ARCH}.tar.gz" | tar -xvz
 sudo ./autobutler install "${API_KEY}"
 ```
 
