@@ -10,7 +10,7 @@ navigation:
 
 ## What is AutoButler?
 
-AutoButler is a powerful automation platform designed to streamline your home management.
+AutoButler is a powerful software platform designed to streamline your home and data management.
 
 ## Getting Started
 
