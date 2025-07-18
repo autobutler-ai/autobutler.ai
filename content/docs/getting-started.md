@@ -34,13 +34,10 @@ If you wish to install it via `curl`, you can run the following command:
 
 ```bash
 API_KEY="your-api-key"
-VERSION="v0.0.1"
 OS="$(uname -s)"
 ARCH="$(uname -m)"
-curl \
-  --fail \
-  -L \
-  "https://github.com/exokomodo/autobutler.ai/releases/download/${VERSION}/autobutler_${OS}_${ARCH}.tar.gz" | tar -xvz
+curl --fail -L \
+  "https://github.com/exokomodo/autobutler.ai/releases/latest/download/autobutler_${OS}_${ARCH}.tar.gz" | tar -xvz
 sudo ./autobutler install "${API_KEY}"
 ```
 
@@ -48,12 +45,10 @@ or if you prefer to use `wget`, you can run:
 
 ```bash
 API_KEY="your-api-key"
-VERSION="v0.0.1"
 OS="$(uname -s)"
 ARCH="$(uname -m)"
-wget \
-  -qO- \
-  "https://github.com/exokomodo/autobutler.ai/releases/download/${VERSION}/autobutler_${OS}_${ARCH}.tar.gz" | tar -xvz
+wget -qO- \
+  "https://github.com/exokomodo/autobutler.ai/releases/latest/download/autobutler_${OS}_${ARCH}.tar.gz" | tar -xvz
 sudo ./autobutler install "${API_KEY}"
 ```
 
