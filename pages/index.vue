@@ -4,66 +4,17 @@
     <div class="hero-section">
       <h1>The New Era of Digital Independence Starts With You.</h1>
       <p class="subtitle">
-        Own your data. Control your future. Stop paying subscription ransoms
-        forever.
+        Own your data. Control your future.
       </p>
-      <div class="cta-buttons">
-        <NuxtLink to="/about" class="btn primary">Get Started</NuxtLink>
-        <NuxtLink to="/features" class="btn secondary">Learn More</NuxtLink>
-      </div>
     </div>
 
     <div class="content-wrapper">
-      <div class="features-section">
-        <div class="feature-grid">
-          <a href="/features#own-intelligence" class="feature-card">
-            <h3>Own Your Intelligence</h3>
-            <p>
-              Smart home automation that learns from you, stores nothing in
-              corporate clouds.
-            </p>
-          </a>
-          <a href="/features#subscription-freedom" class="feature-card">
-            <h3>Break Subscription Chains</h3>
-            <p>Pay once, own forever. No monthly ransoms, no data hostages.</p>
-          </a>
-          <a href="/features#privacy-design" class="feature-card">
-            <h3>True Privacy by Design</h3>
-            <p>
-              Your family calendar, photos, and personal data never leave your
-              control.
-            </p>
-          </a>
-          <a href="/features#platform-freedom" class="feature-card">
-            <h3>Escape Platform Lock-in</h3>
-            <p>
-              Your data works everywhere, integrates with anything, owned by you
-              alone.
-            </p>
-          </a>
-          <a href="/features#ad-blocking" class="feature-card">
-            <h3>Block Ad Surveillance</h3>
-            <p>
-              Stop every tracker at the DNS level. No ads, no data leaks, no
-              corporate spying.
-            </p>
-          </a>
-          <a href="/features#data-vault" class="feature-card">
-            <h3>Your Personal Data Vault</h3>
-            <p>
-              Network-attached storage that you physically control. Your files,
-              your hardware, your rules.
-            </p>
-          </a>
-        </div>
-      </div>
-
       <div class="manifesto-section">
         <h2>The Zero-to-One Truth</h2>
         <p>
           Every tech giant built their empire on a lie: that convenience
           requires surrender. We're building the opposite—a world where you keep
-          both your data and your freedom. Where your smart home serves you, not
+          both your data and your freedom. Where your technology serves you, not
           shareholders.
         </p>
         <p>This isn't just technology. It's digital sovereignty.</p>
@@ -131,14 +82,6 @@
   gap: 1rem;
   justify-content: center;
   margin-top: 2rem;
-}
-
-.features-section {
-  padding: 4rem 2rem;
-  background: rgba(255, 255, 255, 0.03);
-  width: 100%;
-  position: relative;
-  z-index: 2;
 }
 
 .feature-grid {

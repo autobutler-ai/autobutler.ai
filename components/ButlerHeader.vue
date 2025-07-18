@@ -8,7 +8,6 @@
 
       <!-- Desktop Navigation -->
       <nav class="header-links desktop-nav">
-        <NuxtLink to="/features">Features</NuxtLink>
         <NuxtLink to="/docs">Documentation</NuxtLink>
         <a href="https://n0epk0-rt.myshopify.com/" target="_blank">Purchase</a>
         <NuxtLink to="/login" class="login-link">Login</NuxtLink>
@@ -39,7 +38,6 @@
         </button>
       </div>
       <nav class="mobile-nav-content">
-        <NuxtLink to="/features" @click="closeMobileMenu">Features</NuxtLink>
         <NuxtLink to="/docs" @click="closeMobileMenu">Documentation</NuxtLink>
         <a href="https://n0epk0-rt.myshopify.com/" @click="closeMobileMenu">Purchase</a>
         <NuxtLink to="/login" class="mobile-login-link" @click="closeMobileMenu"
