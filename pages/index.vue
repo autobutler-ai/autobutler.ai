@@ -24,6 +24,9 @@
         <p class="highlight">
           Stop renting your digital life. Start owning it.
         </p>
+        <p class="subtitle">
+          Run a cloud in your home. Manage and edit your files with no one to track you or claim ownership of your data.
+        </p>
         <NuxtLink to="/about" class="btn primary">Get Started</NuxtLink>
       </div>
     </div>
