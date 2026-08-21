@@ -20,7 +20,7 @@
         <a href="/privacy">Privacy</a>
         <a href="/terms">Terms</a>
         <a href="/contact">Contact</a>
-        <a href="https://github.com/autobutler-org/autobutler">Github</a>
+        <a href="https://github.com/autobutler-org/quark">Github</a>
       </div>
     </div>
   </footer>
