@@ -8,18 +8,11 @@
 
       <!-- Desktop Navigation -->
       <nav class="header-links desktop-nav">
-        <div
-          class="dropdown"
-          @mouseenter="isProductDropdownOpen = true"
-          @mouseleave="isProductDropdownOpen = false"
-        >
-          <button class="dropdown-button">Product</button>
-          <div class="dropdown-menu" :class="{ open: isProductDropdownOpen }">
-            <NuxtLink to="/docs" class="dropdown-item">How It Works</NuxtLink>
-            <NuxtLink to="/support" class="dropdown-item">Support</NuxtLink>
-            <NuxtLink to="/community" class="dropdown-item">Community</NuxtLink>
-          </div>
-        </div>
+        <!-- Single forward to the Quark product site — only one product exists today.
+             Revert to a "Products" dropdown when a second product ships, see #121. -->
+        <a href="https://quark.autobutler.org" class="quark-link">Quark</a>
+        <NuxtLink to="/support">Support</NuxtLink>
+        <NuxtLink to="/community">Community</NuxtLink>
         <NuxtLink to="/blogs">Blog</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
         <NuxtLink to="/enterprise">Enterprise</NuxtLink>
@@ -52,27 +45,11 @@
         </button>
       </div>
       <nav class="mobile-nav-content">
-        <div class="mobile-dropdown">
-          <button
-            class="mobile-dropdown-button"
-            :class="{ active: isProductDropdownOpenMobile }"
-            @click="toggleProductDropdown"
-          >
-            Product
-          </button>
-          <div
-            class="mobile-dropdown-items"
-            :class="{ open: isProductDropdownOpenMobile }"
-          >
-            <NuxtLink to="/docs" @click="closeMobileMenu"
-              >How It Works</NuxtLink
-            >
-            <NuxtLink to="/support" @click="closeMobileMenu">Support</NuxtLink>
-            <NuxtLink to="/community" @click="closeMobileMenu"
-              >Community</NuxtLink
-            >
-          </div>
-        </div>
+        <!-- Single forward to the Quark product site — see #121 for reintroducing
+             a Products list once there's more than one. -->
+        <a href="https://quark.autobutler.org" @click="closeMobileMenu">Quark</a>
+        <NuxtLink to="/support" @click="closeMobileMenu">Support</NuxtLink>
+        <NuxtLink to="/community" @click="closeMobileMenu">Community</NuxtLink>
         <NuxtLink to="/blogs" @click="closeMobileMenu">Blog</NuxtLink>
         <NuxtLink to="/about" @click="closeMobileMenu">About</NuxtLink>
         <NuxtLink to="/enterprise" @click="closeMobileMenu"
@@ -103,21 +80,13 @@
 import { ref, onMounted, onUnmounted } from "vue";
 
 const isMobileMenuOpen = ref(false);
-const isProductDropdownOpen = ref(false);
-const isProductDropdownOpenMobile = ref(false);
 
 const toggleMobileMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value;
-  isProductDropdownOpenMobile.value = false;
-};
-
-const toggleProductDropdown = () => {
-  isProductDropdownOpenMobile.value = !isProductDropdownOpenMobile.value;
 };
 
 const closeMobileMenu = () => {
   isMobileMenuOpen.value = false;
-  isProductDropdownOpenMobile.value = false;
 };
 
 // Close mobile menu when clicking outside or on escape key
@@ -215,160 +184,12 @@ onMounted(() => {
   );
 }
 
-/* Dropdown Styles */
-.dropdown {
-  position: relative;
-}
-
-.dropdown-button {
-  background: transparent;
+.quark-link {
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.95rem;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
-.dropdown-button:hover {
-  color: #fff;
+.quark-link:hover {
   border-color: rgba(0, 255, 170, 0.4);
-  background: linear-gradient(
-    135deg,
-    rgba(0, 255, 170, 0.1),
-    rgba(0, 187, 255, 0.1)
-  );
-}
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: rgba(28, 32, 34, 0.98);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 8px;
-  min-width: 180px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: all 0.3s ease;
-  margin-top: 0.5rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-}
-
-.dropdown-menu.open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.dropdown-item {
-  display: block;
-  color: rgba(255, 255, 255, 0.8) !important;
-  text-decoration: none;
-  padding: 0.75rem 1rem !important;
-  transition: all 0.3s ease;
-  border-radius: 0 !important;
-  background: transparent !important;
-}
-
-.dropdown-item:first-child {
-  border-radius: 8px 8px 0 0 !important;
-}
-
-.dropdown-item:last-child {
-  border-radius: 0 0 8px 8px !important;
-}
-
-.dropdown-item:hover {
-  color: #fff !important;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 255, 170, 0.15),
-    rgba(0, 187, 255, 0.15)
-  ) !important;
-}
-
-/* Mobile Dropdown */
-.mobile-dropdown {
-  display: flex;
-  flex-direction: column;
-}
-
-.mobile-dropdown-button {
-  background: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  font-size: 1.1rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  transition: all 0.3s ease;
-  cursor: pointer;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-}
-
-.mobile-dropdown-button::after {
-  content: "▼";
-  font-size: 0.75rem;
-  transition: transform 0.3s ease;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.mobile-dropdown-button.active::after {
-  transform: rotate(180deg);
-}
-
-.mobile-dropdown-button:hover {
-  color: #fff;
-  padding-left: 0.5rem;
-}
-
-.mobile-dropdown-items {
-  display: flex;
-  flex-direction: column;
-  max-height: 0;
-  overflow: hidden;
-  transition:
-    max-height 0.3s ease,
-    opacity 0.3s ease;
-  opacity: 0;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
-}
-
-.mobile-dropdown-items.open {
-  max-height: 300px;
-  opacity: 1;
-}
-
-.mobile-dropdown-items a {
-  display: block;
-  font-size: 1rem;
-  border: none !important;
-  padding: 0.75rem 1rem !important;
-  margin: 0 !important;
-  color: rgba(255, 255, 255, 0.75) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-}
-
-.mobile-dropdown-items a:last-child {
-  border-bottom: none !important;
-}
-
-.mobile-dropdown-items a:hover {
-  background: rgba(0, 255, 170, 0.1) !important;
-  color: #fff !important;
-  padding-left: 1.5rem !important;
 }
 
 .login-link {
