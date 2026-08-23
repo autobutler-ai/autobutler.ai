@@ -8,15 +8,6 @@
       </p>
     </div>
 
-    <div class="image-showcase">
-      <div class="image-container left">
-        <img src="/assets/images/files.webp" alt="Files" />
-      </div>
-      <div class="image-container right">
-        <img src="/assets/images/casing.webp" alt="Casing" />
-      </div>
-    </div>
-
     <div class="content-wrapper">
       <div class="manifesto-section">
         <h2>The convenience of the cloud, the privacy of your home.</h2>
@@ -549,46 +540,6 @@ onMounted(() => {
   transform: translateY(-2px);
 }
 
-.image-showcase {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  padding: 4rem 2rem;
-  margin: 4rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.02);
-  max-width: 1200px;
-  width: 100%;
-}
-
-.image-container {
-  flex: 1;
-  max-width: 500px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.image-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-}
-
-.image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-  aspect-ratio: 16 / 10;
-}
-
 @media (max-width: 768px) {
   .hero-section h1 {
     font-family: var(--font-hero);
@@ -605,16 +556,6 @@ onMounted(() => {
 
   .feature-grid {
     grid-template-columns: 1fr;
-  }
-
-  .image-showcase {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem 1rem;
-  }
-
-  .image-container {
-    max-width: 100%;
   }
 
   #mc_embed_signup {

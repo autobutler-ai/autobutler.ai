@@ -28,8 +28,6 @@ If you can't reach the address, make sure the device running AutoButler is power
 
 ## Cirrus — Your Files
 
-![Cirrus Files](/assets/images/files.webp)
-
 Cirrus is the file browser. Think of it like a Google Drive or iCloud interface, except everything lives on your hardware at home.
 
 ### Browsing your files
@@ -42,8 +40,6 @@ When you open Cirrus you'll see your files and folders listed. You can:
 - **Click the home icon** in the breadcrumb to jump back to the root
 
 ### Changing the view
-
-![View Selection](/assets/images/view-buttons.webp)
 
 Cirrus has three layouts — pick whichever works best for what you're doing:
 

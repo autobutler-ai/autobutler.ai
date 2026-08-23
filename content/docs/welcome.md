@@ -15,8 +15,6 @@ entirely inside your house. No big tech, no data outside of your home, just your
 
 ## How does AutoButler work securely?
 
-![AutoButler Architecture](/assets/images/autobutler-architecture.webp)
-
 You know how you can't use your home printer when you leave your WiFi network? Autobutler also works entirely
 locally, meaning that public internet can't really access the Butler. (We are working on secure ways to access the
 device from outside your home - for the nerds, this would be a reverse VPN going _into_ your home that only trusted
@@ -25,8 +23,8 @@ on your WiFi network. The technologies that your router uses to protect your dev
 know they even exist - which is the kind of security we kind of like using. Just make sure your WiFi is password
 protected.
 
-When you access the butler, all you're doing is asking your router to find the autobutler on your local network, as
-you can see in the image above. The router does the hard work of figuring out which device is which - think of the
+When you access the butler, all you're doing is asking your router to find the autobutler on your local network.
+The router does the hard work of figuring out which device is which - think of the
 router like a post office, remembering which zip code is where. The only connection the butler makes with the outside
 internet is the Update feature. Don't believe us? Our code is hosted online for free at
 [our Github](https://github.com/autobutler-org/autobutler).
