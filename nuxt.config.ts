@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       meta: [
-        { name: "description", content: "AutoButler — your personal home data butler. Self-hosted file management, backup, and media serving." },
+        { name: "description", content: "AutoButler — the company behind Quark, a self-hosted personal cloud device. No subscriptions, no data mining, just your files on hardware you own." },
         { property: "og:site_name", content: "AutoButler" },
         { property: "og:type", content: "website" },
         { property: "og:image", content: "https://autobutler.org/android-chrome-512x512.png" },
