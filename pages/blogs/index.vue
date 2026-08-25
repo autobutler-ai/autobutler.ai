@@ -3,9 +3,7 @@
     <PageContainer>
       <div class="blogs-header">
         <h1>Blog</h1>
-        <p class="subtitle">
-          Updates, insights, and stories from the AutoButler team
-        </p>
+        <p class="subtitle">Updates, insights, and stories from our team</p>
       </div>
 
       <div v-if="articles && articles.length > 0" class="blog-list">
@@ -51,16 +49,16 @@ interface BlogPost extends ContentCollectionItem {
 
 useSeoMeta({
   title: "Blog — AutoButler",
-  description: "Updates, insights, and stories from the AutoButler team.",
+  description: "Updates, insights, and stories from our team.",
   ogTitle: "AutoButler Blog",
-  ogDescription: "Updates, insights, and stories from the AutoButler team.",
+  ogDescription: "Updates, insights, and stories from our team.",
   ogType: "website",
   ogUrl: "https://autobutler.org/blogs",
   ogSiteName: "AutoButler",
   ogImage: "https://autobutler.org/android-chrome-512x512.png",
   twitterCard: "summary",
   twitterTitle: "AutoButler Blog",
-  twitterDescription: "Updates, insights, and stories from the AutoButler team.",
+  twitterDescription: "Updates, insights, and stories from our team.",
   twitterImage: "https://autobutler.org/android-chrome-512x512.png",
 });
 
