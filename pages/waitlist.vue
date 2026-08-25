@@ -20,7 +20,7 @@
       </div>
 
       <div class="launch-info">
-        <p>🚀 <strong>Coming Summer 2026</strong></p>
+        <p><strong>Coming Summer 2026</strong></p>
         <p>
           We're working hard to bring you the best self-hosted storage solution.
           Stay tuned!
