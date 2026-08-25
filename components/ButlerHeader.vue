@@ -11,7 +11,7 @@
         <!-- Single forward to the Quark product site — only one product exists today.
              Revert to a "Products" dropdown when a second product ships, see #121. -->
         <a href="https://quark.autobutler.org" class="quark-link">Quark</a>
-        <NuxtLink to="/support">Support</NuxtLink>
+        <a href="https://quark.autobutler.org/support">Support</a>
         <NuxtLink to="/community">Community</NuxtLink>
         <NuxtLink to="/blogs">Blog</NuxtLink>
         <NuxtLink to="/about">About</NuxtLink>
@@ -48,7 +48,7 @@
         <!-- Single forward to the Quark product site — see #121 for reintroducing
              a Products list once there's more than one. -->
         <a href="https://quark.autobutler.org" @click="closeMobileMenu">Quark</a>
-        <NuxtLink to="/support" @click="closeMobileMenu">Support</NuxtLink>
+        <a href="https://quark.autobutler.org/support" @click="closeMobileMenu">Support</a>
         <NuxtLink to="/community" @click="closeMobileMenu">Community</NuxtLink>
         <NuxtLink to="/blogs" @click="closeMobileMenu">Blog</NuxtLink>
         <NuxtLink to="/about" @click="closeMobileMenu">About</NuxtLink>
