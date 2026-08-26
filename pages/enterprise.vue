@@ -86,11 +86,13 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Enterprise — AutoButler',
-  description: 'AutoButler for organizations. Private, self-hosted cloud storage with no vendor lock-in.',
-  ogTitle: 'Enterprise — AutoButler',
-  ogDescription: 'AutoButler for organizations. Private, self-hosted cloud storage with no vendor lock-in.',
-  ogType: 'website',
+  title: "Enterprise — AutoButler",
+  description:
+    "AutoButler for organizations. Private, self-hosted cloud storage with no vendor lock-in.",
+  ogTitle: "Enterprise — AutoButler",
+  ogDescription:
+    "AutoButler for organizations. Private, self-hosted cloud storage with no vendor lock-in.",
+  ogType: "website",
 });
 </script>
 

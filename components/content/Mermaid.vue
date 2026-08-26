@@ -11,11 +11,12 @@ const el = ref<HTMLElement | null>(null);
 
 function extractText(vnodes: unknown[]): string {
   return vnodes
-    .map((node: { children?: string | unknown[] }) => {
+    .map((node: unknown) => {
       if (typeof node === "string") return node;
-      if (node?.children) {
-        if (typeof node.children === "string") return node.children;
-        if (Array.isArray(node.children)) return extractText(node.children);
+      if (node && typeof node === "object" && "children" in node) {
+        const { children } = node as { children?: string | unknown[] };
+        if (typeof children === "string") return children;
+        if (Array.isArray(children)) return extractText(children);
       }
       return "";
     })
