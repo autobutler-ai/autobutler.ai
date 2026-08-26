@@ -52,11 +52,13 @@ const submitToGitHub = () => {
   window.open(issueUrl, "_blank");
 };
 useSeoMeta({
-  title: 'Support — AutoButler',
-  description: 'Get help with AutoButler. Report bugs, request features, and find answers.',
-  ogTitle: 'Support — AutoButler',
-  ogDescription: 'Get help with AutoButler. Report bugs, request features, and find answers.',
-  ogType: 'website',
+  title: "Support — AutoButler",
+  description:
+    "Get help with AutoButler. Report bugs, request features, and find answers.",
+  ogTitle: "Support — AutoButler",
+  ogDescription:
+    "Get help with AutoButler. Report bugs, request features, and find answers.",
+  ogType: "website",
 });
 </script>
 
@@ -67,27 +69,60 @@ useSeoMeta({
 
       <div class="help-links">
         <h2>Need Help?</h2>
-        <p>Check our documentation first — most questions are answered there.</p>
+        <p>
+          Check our documentation first — most questions are answered there.
+        </p>
         <div class="help-link-grid">
-          <a href="/docs/getting-started" class="help-link-card" aria-label="Getting started guide">
+          <a
+            href="/docs/getting-started"
+            class="help-link-card"
+            aria-label="Getting started guide"
+          >
             <Icon name="heroicons:rocket-launch" class="help-link-icon" />
             <span class="help-link-title">Getting Started</span>
-            <span class="help-link-desc">Set up your AutoButler for the first time</span>
+            <span class="help-link-desc"
+              >Set up your AutoButler for the first time</span
+            >
           </a>
-          <a href="/docs/help" class="help-link-card" aria-label="Troubleshooting guide">
+          <a
+            href="/docs/help"
+            class="help-link-card"
+            aria-label="Troubleshooting guide"
+          >
             <Icon name="heroicons:wrench-screwdriver" class="help-link-icon" />
             <span class="help-link-title">Troubleshooting</span>
-            <span class="help-link-desc">Common issues and how to fix them</span>
+            <span class="help-link-desc"
+              >Common issues and how to fix them</span
+            >
           </a>
-          <a href="https://github.com/autobutler-org/autobutler/issues" target="_blank" rel="noopener" class="help-link-card" aria-label="GitHub Issues — ask questions and report problems (opens in new tab)">
-            <Icon name="heroicons:chat-bubble-left-right" class="help-link-icon" />
+          <a
+            href="https://github.com/autobutler-org/autobutler/issues"
+            target="_blank"
+            rel="noopener"
+            class="help-link-card"
+            aria-label="GitHub Issues — ask questions and report problems (opens in new tab)"
+          >
+            <Icon
+              name="heroicons:chat-bubble-left-right"
+              class="help-link-icon"
+            />
             <span class="help-link-title">GitHub Issues</span>
-            <span class="help-link-desc">Ask questions and report problems</span>
+            <span class="help-link-desc"
+              >Ask questions and report problems</span
+            >
           </a>
-          <a href="https://github.com/autobutler-org/autobutler" target="_blank" rel="noopener" class="help-link-card" aria-label="AutoButler GitHub repository (opens in new tab)">
+          <a
+            href="https://github.com/autobutler-org/autobutler"
+            target="_blank"
+            rel="noopener"
+            class="help-link-card"
+            aria-label="AutoButler GitHub repository (opens in new tab)"
+          >
             <Icon name="mdi:github" class="help-link-icon" />
             <span class="help-link-title">GitHub</span>
-            <span class="help-link-desc">Browse source, file issues, and contribute</span>
+            <span class="help-link-desc"
+              >Browse source, file issues, and contribute</span
+            >
           </a>
         </div>
       </div>

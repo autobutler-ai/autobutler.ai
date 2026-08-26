@@ -57,7 +57,7 @@ The 3-2-1 rule is simple:
 
 AutoButler helps with the first two: it can mirror your files to an attached external drive automatically. The third copy is on you. A USB drive at your parents' house that you swap out once a month is enough.
 
-There is no backup strategy that can save you from *no backup at all.*
+There is no backup strategy that can save you from _no backup at all._
 
 ---
 

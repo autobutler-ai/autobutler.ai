@@ -50,66 +50,66 @@
           if you feel like it.
         </p>
         <ClientOnly>
-        <div id="mc_embed_shell">
-          <div id="mc_embed_signup">
-            <form
-              id="mc-embedded-subscribe-form"
-              action="https://autobutler.us5.list-manage.com/subscribe/post?u=83e0cf2d6edd852308ba6671f&amp;id=a3382ba074&amp;f_id=00a0c2e1f0"
-              method="post"
-              name="mc-embedded-subscribe-form"
-              class="validate"
-              target="_blank"
-            >
-              <div id="mc_embed_signup_scroll">
-                <h2>Want updates?</h2>
-                <p class="mc-powered-by">Powered by Mailchimp</p>
-                <div class="mc-field-group">
-                  <label for="mce-EMAIL">Email Address</label
-                  ><input
-                    id="mce-EMAIL"
-                    type="email"
-                    name="EMAIL"
-                    class="required email"
-                    required="true"
-                    value=""
-                  />
-                </div>
-                <div id="mce-responses" class="clear">
+          <div id="mc_embed_shell">
+            <div id="mc_embed_signup">
+              <form
+                id="mc-embedded-subscribe-form"
+                action="https://autobutler.us5.list-manage.com/subscribe/post?u=83e0cf2d6edd852308ba6671f&amp;id=a3382ba074&amp;f_id=00a0c2e1f0"
+                method="post"
+                name="mc-embedded-subscribe-form"
+                class="validate"
+                target="_blank"
+              >
+                <div id="mc_embed_signup_scroll">
+                  <h2>Want updates?</h2>
+                  <p class="mc-powered-by">Powered by Mailchimp</p>
+                  <div class="mc-field-group">
+                    <label for="mce-EMAIL">Email Address</label
+                    ><input
+                      id="mce-EMAIL"
+                      type="email"
+                      name="EMAIL"
+                      class="required email"
+                      required="true"
+                      value=""
+                    />
+                  </div>
+                  <div id="mce-responses" class="clear">
+                    <div
+                      id="mce-error-response"
+                      class="response"
+                      style="display: none"
+                    ></div>
+                    <div
+                      id="mce-success-response"
+                      class="response"
+                      style="display: none"
+                    ></div>
+                  </div>
                   <div
-                    id="mce-error-response"
-                    class="response"
-                    style="display: none"
-                  ></div>
-                  <div
-                    id="mce-success-response"
-                    class="response"
-                    style="display: none"
-                  ></div>
+                    aria-hidden="true"
+                    style="position: absolute; left: -5000px"
+                  >
+                    <input
+                      type="text"
+                      name="b_83e0cf2d6edd852308ba6671f_a3382ba074"
+                      tabindex="-1"
+                      value=""
+                    />
+                  </div>
+                  <div class="clear">
+                    <input
+                      id="mc-embedded-subscribe"
+                      type="submit"
+                      name="subscribe"
+                      class="button"
+                      value="Subscribe"
+                    />
+                  </div>
                 </div>
-                <div
-                  aria-hidden="true"
-                  style="position: absolute; left: -5000px"
-                >
-                  <input
-                    type="text"
-                    name="b_83e0cf2d6edd852308ba6671f_a3382ba074"
-                    tabindex="-1"
-                    value=""
-                  />
-                </div>
-                <div class="clear">
-                  <input
-                    id="mc-embedded-subscribe"
-                    type="submit"
-                    name="subscribe"
-                    class="button"
-                    value="Subscribe"
-                  />
-                </div>
-              </div>
-            </form>
+              </form>
+            </div>
           </div>
-        </div>
         </ClientOnly>
       </div>
     </div>

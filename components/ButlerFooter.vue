@@ -1,7 +1,7 @@
 <template>
   <footer
-    ref="footerEl"
     v-show="isVisible"
+    ref="footerEl"
     class="footer"
     :class="{
       'footer-visible': isVisible,
@@ -27,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, ref, onMounted, onUnmounted, nextTick } from "vue";
+import { ref, onMounted, onUnmounted, nextTick } from "vue";
 import { useVersion } from "~/composables/useVersion";
 
 // Props to control visibility

@@ -15,34 +15,34 @@
  * optimizations land.
  */
 
-import { readdirSync, statSync } from 'fs';
-import { join, extname } from 'path';
+import { readdirSync, statSync } from "fs";
+import { join, extname } from "path";
 
-const OUTPUT_DIR = '.output/public';
+const OUTPUT_DIR = ".output/public";
 
 const BUDGETS = {
-  js: { label: 'JavaScript', maxKB: 4096 },
-  css: { label: 'CSS', maxKB: 200 },
-  images: { label: 'Images', maxKB: 15360 },
-  total: { label: 'Total', maxKB: 20480 },
+  js: { label: "JavaScript", maxKB: 4096 },
+  css: { label: "CSS", maxKB: 200 },
+  images: { label: "Images", maxKB: 15360 },
+  total: { label: "Total", maxKB: 20480 },
 };
 
 // Source maps are excluded from budgets — they're dev artifacts and
 // would inflate JS/CSS totals by 5-10x.
-const EXCLUDED_EXTS = new Set(['.map']);
+const EXCLUDED_EXTS = new Set([".map"]);
 
 const EXT_MAP = {
-  '.js': 'js',
-  '.mjs': 'js',
-  '.cjs': 'js',
-  '.css': 'css',
-  '.png': 'images',
-  '.jpg': 'images',
-  '.jpeg': 'images',
-  '.gif': 'images',
-  '.webp': 'images',
-  '.svg': 'images',
-  '.ico': 'images',
+  ".js": "js",
+  ".mjs": "js",
+  ".cjs": "js",
+  ".css": "css",
+  ".png": "images",
+  ".jpg": "images",
+  ".jpeg": "images",
+  ".gif": "images",
+  ".webp": "images",
+  ".svg": "images",
+  ".ico": "images",
 };
 
 function walkDir(dir, results = []) {
@@ -66,7 +66,7 @@ try {
   files = walkDir(OUTPUT_DIR);
 } catch {
   console.error(`❌ Output directory not found: ${OUTPUT_DIR}`);
-  console.error('   Run `npm run generate` first.');
+  console.error("   Run `npm run generate` first.");
   process.exit(1);
 }
 
@@ -81,7 +81,7 @@ for (const file of files) {
   if (type) totals[type] += size;
 }
 
-console.log('\n📊 Bundle Size Report\n');
+console.log("\n📊 Bundle Size Report\n");
 
 let failed = false;
 
@@ -90,20 +90,20 @@ for (const [key, { label, maxKB }] of Object.entries(BUDGETS)) {
   const budgetKB = maxKB;
   const pct = ((actualKB / budgetKB) * 100).toFixed(1);
   const over = actualKB > budgetKB;
-  const icon = over ? '❌' : actualKB > budgetKB * 0.9 ? '⚠️ ' : '✅';
+  const icon = over ? "❌" : actualKB > budgetKB * 0.9 ? "⚠️ " : "✅";
   console.log(
     `  ${icon} ${label.padEnd(14)} ${formatKB(totals[key]).padStart(10)} / ${formatKB(maxKB * 1024).padStart(10)}  (${pct}%)`,
   );
   if (over) failed = true;
 }
 
-console.log('');
+console.log("");
 
 if (failed) {
   console.error(
-    '❌ One or more performance budgets exceeded. See report above.',
+    "❌ One or more performance budgets exceeded. See report above.",
   );
   process.exit(1);
 } else {
-  console.log('✅ All performance budgets passed.');
+  console.log("✅ All performance budgets passed.");
 }

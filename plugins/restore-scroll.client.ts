@@ -5,7 +5,7 @@
 export default defineNuxtPlugin((_nuxtApp) => {
   const router = useRouter();
   router.beforeEach(() => {
-    document.body.style.overflow = '';
-    document.documentElement.style.overflow = '';
+    document.body.style.overflow = "";
+    document.documentElement.style.overflow = "";
   });
 });
