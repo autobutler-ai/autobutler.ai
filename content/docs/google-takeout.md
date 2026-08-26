@@ -104,4 +104,4 @@ AutoButler is primarily a file and photo manager, so the Photos and Drive export
 
 ---
 
-*Need help? Visit the [support page](/support) or [community forums](/community).*
+_Need help? Visit the [support page](/support) or [community forums](/community)._

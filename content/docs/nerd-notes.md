@@ -15,15 +15,15 @@ If you want to understand what's running in your house, this is the page.
 
 ## Stack
 
-| Layer | Technology |
-| ----- | ---------- |
-| Backend | Go + [Gin](https://github.com/gin-gonic/gin) |
-| Frontend | [Flutter](https://flutter.dev) (web, iOS, Android) |
-| Database | SQLite via [modernc.org/sqlite](https://pkg.go.dev/modernc.org/sqlite) |
-| Migrations | [golang-migrate](https://github.com/golang-migrate/migrate) |
-| DB queries | [sqlc](https://sqlc.dev) |
-| API docs | [Swagger/swag](https://github.com/swaggo/swag) |
-| Observability | [OpenTelemetry](https://opentelemetry.io) |
+| Layer         | Technology                                                             |
+| ------------- | ---------------------------------------------------------------------- |
+| Backend       | Go + [Gin](https://github.com/gin-gonic/gin)                           |
+| Frontend      | [Flutter](https://flutter.dev) (web, iOS, Android)                     |
+| Database      | SQLite via [modernc.org/sqlite](https://pkg.go.dev/modernc.org/sqlite) |
+| Migrations    | [golang-migrate](https://github.com/golang-migrate/migrate)            |
+| DB queries    | [sqlc](https://sqlc.dev)                                               |
+| API docs      | [Swagger/swag](https://github.com/swaggo/swag)                         |
+| Observability | [OpenTelemetry](https://opentelemetry.io)                              |
 
 The backend is a single Go binary that serves both the REST API and the Flutter web build.
 On first boot it runs database migrations automatically.
@@ -88,15 +88,15 @@ Tokens are valid for 30 days. Pass them as `Authorization: Bearer <token>` or as
 
 ### Key endpoints
 
-| Method | Path | What it does |
-| ------ | ---- | ------------ |
-| GET | `/api/v1/health` | System health (CPU, memory, disk, temperature) |
-| GET | `/api/v1/cirrus` | List files |
-| POST | `/api/v1/cirrus/upload/{path}` | Upload a file |
-| GET | `/api/v1/storage/devices/status` | List storage devices |
-| PATCH | `/api/v1/storage/devices/{devicePath}/name` | Rename a device |
-| GET | `/api/v1/version` | Installed version |
-| POST | `/api/v1/version/latest` | Update to latest release |
+| Method | Path                                        | What it does                                   |
+| ------ | ------------------------------------------- | ---------------------------------------------- |
+| GET    | `/api/v1/health`                            | System health (CPU, memory, disk, temperature) |
+| GET    | `/api/v1/cirrus`                            | List files                                     |
+| POST   | `/api/v1/cirrus/upload/{path}`              | Upload a file                                  |
+| GET    | `/api/v1/storage/devices/status`            | List storage devices                           |
+| PATCH  | `/api/v1/storage/devices/{devicePath}/name` | Rename a device                                |
+| GET    | `/api/v1/version`                           | Installed version                              |
+| POST   | `/api/v1/version/latest`                    | Update to latest release                       |
 
 ---
 

@@ -1,11 +1,9 @@
 <script setup lang="ts">
 useSeoMeta({
   title: "Contact — AutoButler",
-  description:
-    "Get in touch with the AutoButler team via GitHub or email.",
+  description: "Get in touch with the AutoButler team via GitHub or email.",
   ogTitle: "Contact — AutoButler",
-  ogDescription:
-    "Get in touch with the AutoButler team via GitHub or email.",
+  ogDescription: "Get in touch with the AutoButler team via GitHub or email.",
   ogType: "website",
 });
 </script>
@@ -15,8 +13,8 @@ useSeoMeta({
     <div class="contact-content">
       <h1>Contact Us</h1>
       <p class="intro">
-        Have a question, found a bug, or want to say hello? Reach us through
-        one of the channels below.
+        Have a question, found a bug, or want to say hello? Reach us through one
+        of the channels below.
       </p>
 
       <div class="channels">
@@ -41,8 +39,8 @@ useSeoMeta({
           <div class="channel-info">
             <h2>GitHub Issues</h2>
             <p>
-              Found a bug or have a feature request? Open an issue on GitHub
-              and we'll track it properly.
+              Found a bug or have a feature request? Open an issue on GitHub and
+              we'll track it properly.
             </p>
             <span class="channel-link"
               >github.com/autobutler-org/autobutler →</span

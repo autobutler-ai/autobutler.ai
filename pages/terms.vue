@@ -20,10 +20,9 @@ useSeoMeta({
       <div class="section">
         <h2>1. Personal Use</h2>
         <p>
-          Autobutler is designed for personal use to manage and back up your
-          own photos and files. You may not use the software to store or
-          distribute content that violates applicable laws or the rights of
-          others.
+          Autobutler is designed for personal use to manage and back up your own
+          photos and files. You may not use the software to store or distribute
+          content that violates applicable laws or the rights of others.
         </p>
       </div>
 
@@ -53,10 +52,10 @@ useSeoMeta({
         <h2>4. Acceptable Use</h2>
         <p>
           You agree not to use Autobutler for any unlawful purpose, to attempt
-          to gain unauthorised access to other systems, or to interfere with
-          the operation of the software for other users. Because Autobutler
-          runs entirely on your own hardware and we have no access to your data
-          or device, these terms are legally binding but not technically
+          to gain unauthorised access to other systems, or to interfere with the
+          operation of the software for other users. Because Autobutler runs
+          entirely on your own hardware and we have no access to your data or
+          device, these terms are legally binding but not technically
           enforceable by us. You are solely responsible for your own compliance
           with applicable laws.
         </p>

@@ -47,8 +47,12 @@
       <nav class="mobile-nav-content">
         <!-- Single forward to the Quark product site — see #121 for reintroducing
              a Products list once there's more than one. -->
-        <a href="https://quark.autobutler.org" @click="closeMobileMenu">Quark</a>
-        <a href="https://quark.autobutler.org/support" @click="closeMobileMenu">Support</a>
+        <a href="https://quark.autobutler.org" @click="closeMobileMenu"
+          >Quark</a
+        >
+        <a href="https://quark.autobutler.org/support" @click="closeMobileMenu"
+          >Support</a
+        >
         <NuxtLink to="/community" @click="closeMobileMenu">Community</NuxtLink>
         <NuxtLink to="/blogs" @click="closeMobileMenu">Blog</NuxtLink>
         <NuxtLink to="/about" @click="closeMobileMenu">About</NuxtLink>

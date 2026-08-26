@@ -25,11 +25,13 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'About AutoButler',
-  description: 'Privacy-first personal cloud storage for your home. Learn about our mission to give people control of their data.',
-  ogTitle: 'About AutoButler',
-  ogDescription: 'Privacy-first personal cloud storage for your home. Learn about our mission to give people control of their data.',
-  ogType: 'website',
+  title: "About AutoButler",
+  description:
+    "Privacy-first personal cloud storage for your home. Learn about our mission to give people control of their data.",
+  ogTitle: "About AutoButler",
+  ogDescription:
+    "Privacy-first personal cloud storage for your home. Learn about our mission to give people control of their data.",
+  ogType: "website",
 });
 </script>
 

@@ -52,11 +52,13 @@
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Stories — AutoButler',
-  description: 'Real stories from people who chose privacy and data independence with AutoButler.',
-  ogTitle: 'Stories — AutoButler',
-  ogDescription: 'Real stories from people who chose privacy and data independence with AutoButler.',
-  ogType: 'website',
+  title: "Stories — AutoButler",
+  description:
+    "Real stories from people who chose privacy and data independence with AutoButler.",
+  ogTitle: "Stories — AutoButler",
+  ogDescription:
+    "Real stories from people who chose privacy and data independence with AutoButler.",
+  ogType: "website",
 });
 </script>
 

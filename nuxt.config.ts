@@ -7,21 +7,27 @@ export default defineNuxtConfig({
   nitro: {
     static: true,
   },
-  site: {
-    url: "https://autobutler.org",
-    name: "AutoButler",
-  },
   app: {
     head: {
       meta: [
-        { name: "description", content: "AutoButler — the company behind Quark, a self-hosted personal cloud device. No subscriptions, no data mining, just your files on hardware you own." },
+        {
+          name: "description",
+          content:
+            "AutoButler — the company behind Quark, a self-hosted personal cloud device. No subscriptions, no data mining, just your files on hardware you own.",
+        },
         { property: "og:site_name", content: "AutoButler" },
         { property: "og:type", content: "website" },
-        { property: "og:image", content: "https://autobutler.org/android-chrome-512x512.png" },
+        {
+          property: "og:image",
+          content: "https://autobutler.org/android-chrome-512x512.png",
+        },
         { property: "og:image:width", content: "512" },
         { property: "og:image:height", content: "512" },
         { name: "twitter:card", content: "summary" },
-        { name: "twitter:image", content: "https://autobutler.org/android-chrome-512x512.png" },
+        {
+          name: "twitter:image",
+          content: "https://autobutler.org/android-chrome-512x512.png",
+        },
         { name: "theme-color", content: "#20b2aa" },
       ],
       link: [
@@ -59,6 +65,10 @@ export default defineNuxtConfig({
     },
   },
   content: {
+    renderer: {
+      // Enable anchor links for all headings
+      anchorLinks: true,
+    },
     build: {
       markdown: {
         // Configure content module for better TOC generation
@@ -80,22 +90,12 @@ export default defineNuxtConfig({
             "markdown",
           ],
         },
+        // Enable comprehensive table of contents
+        toc: {
+          depth: 5,
+          searchDepth: 6,
+        },
       },
-    },
-    markdown: {
-      // Enable anchor links for headings
-      anchorLinks: {
-        depth: 6,
-        exclude: [],
-      },
-      // Enable comprehensive table of contents
-      toc: {
-        depth: 5,
-        searchDepth: 6,
-      },
-      // Generate IDs for all headings
-      remarkPlugins: [],
-      rehypePlugins: [],
     },
   },
 });
