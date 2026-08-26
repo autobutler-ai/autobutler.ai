@@ -249,12 +249,16 @@ onMounted(() => {
   top: 0;
   right: -300px;
   width: 300px;
-  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
   background: rgba(28, 32, 34, 0.98);
   backdrop-filter: blur(20px);
   transition: right 0.3s ease;
   z-index: 1001;
   border-left: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-nav.open {
@@ -262,6 +266,7 @@ onMounted(() => {
 }
 
 .mobile-nav-header {
+  flex-shrink: 0;
   padding: 1rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
@@ -342,7 +347,7 @@ onMounted(() => {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
