@@ -65,9 +65,7 @@
           @click="closeMobileMenu"
           >Sign Up</NuxtLink
         >
-        <NuxtLink to="/login" class="mobile-login-link" @click="closeMobileMenu"
-          >Login</NuxtLink
-        >
+        <!-- <NuxtLink to="/login" class="mobile-login-link" @click="closeMobileMenu">Login</NuxtLink> -->
       </nav>
     </div>
 
