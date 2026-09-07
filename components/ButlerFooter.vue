@@ -15,6 +15,7 @@
           © {{ currentYear }} AutoButler. All rights reserved.
         </p>
         <p class="version">{{ displayVersion }}</p>
+        <p class="soli-deo-gloria">Soli Deo Gloria</p>
       </div>
       <div class="footer-links">
         <a href="/privacy">Privacy</a>
@@ -247,6 +248,14 @@ onUnmounted(() => {
   margin: 0;
   font-size: 0.8rem;
   color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
+}
+
+.soli-deo-gloria {
+  margin: 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-style: italic;
   font-weight: 300;
 }
 

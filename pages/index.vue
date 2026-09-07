@@ -3,52 +3,90 @@
     <div class="gradient-overlay" />
     <div class="hero-section">
       <h1>Data Autonomy For Everyone.</h1>
-      <p class="subtitle">
-        A router plug-in device that turns your USB storage into cloud storage.
-      </p>
+      <p class="subtitle">AutoButler is a company that makes products for humans.</p>
     </div>
 
     <div class="content-wrapper">
-      <div class="manifesto-section">
-        <h2>The convenience of the cloud, the privacy of your home.</h2>
+      <div class="about-section">
         <p>
-          Our plug-and-play, no-subscription, no-AI product seeks to restore
-          control to consumers, storing your data in a physical device in your
-          home. Automatically back up your photos, documents, and more without
-          your data leaving your house. Store your content on physical hard
-          drives again with automatic backups.
+          AutoButler is Brandon and James, who want to change the world.
+          Technology isn't evil, we just think there's a better vision for
+          what we can use it to do to improve the lives of people.
         </p>
+      </div>
+
+      <div class="tenets-section">
+        <h2 class="highlight">What We Believe</h2>
+        <div class="tenets-list">
+          <div class="tenet-card tenet-card--wide">
+            <p>
+              We believe that there is an ongoing movement towards creating a
+              permanent "rental class," and that the way out of that is to
+              create non-rental products.
+            </p>
+          </div>
+          <div class="tenets-grid-middle">
+            <div class="tenet-card">
+              <p>We believe in an open, transparent, safe internet.</p>
+            </div>
+            <div class="tenet-card">
+              <p>
+                We believe that individuals should have control over data
+                associated with them.
+              </p>
+            </div>
+            <div class="tenet-card">
+              <p>We believe that products are made for people.</p>
+            </div>
+            <div class="tenet-card">
+              <p>
+                We believe that if a customer doesn't want something, they
+                shouldn't be forced into it.
+              </p>
+            </div>
+            <div class="tenet-card">
+              <p>
+                We believe that better products and companies are the answer
+                to bad products and companies.
+              </p>
+            </div>
+            <div class="tenet-card">
+              <p>We believe that the Fourth Amendment applies to data.</p>
+            </div>
+            <div class="tenet-card">
+              <p>
+                We believe in the inherent dignity and value of humanity and
+                human creativity.
+              </p>
+            </div>
+            <div class="tenet-card">
+              <p>
+                We believe that we have the right to do what we want with our
+                own product, even if that makes it less profitable.
+              </p>
+            </div>
+          </div>
+          <div class="tenet-card tenet-card--wide">
+            <p>
+              We believe that one of the pending benefits of artificial
+              intelligence is the ability to create things that help the
+              working class opt out of bad systems.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flagship-section">
+        <h2 class="highlight">Our Flagship Product</h2>
         <p>
-          AutoButler is just a little device you plug in to the ethernet port of
-          your router, and then plug in any external USB storage you want to
-          use. The device automatically runs on your home network, allowing you
-          to back up photos automatically.
+          Our flagship product is called
+          <a href="https://quark.autobutler.org">Quark</a>, which is a
+          wifi-router plug-in device that turns your USB storage into cloud
+          storage.
         </p>
-        <p>Make yourself independent of major cloud providers.</p>
-        <hr class="divider" />
-        <p>
-          No venture capital involved - completely funded by normal people, like
-          you.
-        </p>
-        <a href="https://github.com/autobutler-org/autobutler"
-          >Completely open-source for transparency.</a
-        >
-        <p>We show all of our code where anyone can look at it.</p>
       </div>
 
       <div class="cta-section">
-        <h2 class="highlight">The cloud, in your home.</h2>
-        <p class="subtitle">
-          Instead of renting your device and storage, you own your own private
-          cloud. Pay for fixes or upgrades... or do them yourself. It's yours to
-          manage as you please.
-        </p>
-        <p class="subtitle">
-          AutoButler gives you private document editing, file storage, calendar,
-          photos, VPN, and more. All your files are stored in your home. Add or
-          remove external hard drives if you want. Mail a backup to your grandma
-          if you feel like it.
-        </p>
         <ClientOnly>
           <div id="mc_embed_shell">
             <div id="mc_embed_signup">
@@ -123,16 +161,16 @@ import { onMounted } from "vue";
 useSeoMeta({
   title: "AutoButler — Data Autonomy For Everyone",
   description:
-    "AutoButler is a plug-and-play, no-subscription home cloud device. Store your photos, files, and data on your own hardware — no Google, no AWS, no monthly fees.",
+    "AutoButler believes products should be made for people, not the other way around. See what we stand for.",
   ogTitle: "AutoButler — Data Autonomy For Everyone",
   ogDescription:
-    "A plug-and-play home cloud device. Your photos and files, stored on your own hardware. No subscriptions, no big tech.",
+    "AutoButler believes products should be made for people, not the other way around. See what we stand for.",
   ogType: "website",
   ogUrl: "https://autobutler.org",
   twitterCard: "summary_large_image",
   twitterTitle: "AutoButler — Data Autonomy For Everyone",
   twitterDescription:
-    "A plug-and-play home cloud device. Your photos and files, stored on your own hardware. No subscriptions, no big tech.",
+    "AutoButler believes products should be made for people, not the other way around. See what we stand for.",
 });
 
 // Load Mailchimp CSS
@@ -450,41 +488,87 @@ onMounted(() => {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.manifesto-section {
+.tenets-section {
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tenets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  text-align: left;
+}
+
+.tenets-grid-middle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.tenet-card {
+  padding: 1.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tenet-card--wide {
+  text-align: center;
+}
+
+.tenet-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tenet-card p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.about-section {
+  padding: 4rem 2rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.flagship-section {
   padding: 4rem 2rem;
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.manifesto-section h2 {
-  font-family: var(--font-hero);
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  background: linear-gradient(135deg, #ffffff, rgba(255, 255, 255, 0.8));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.flagship-section p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.manifesto-section a {
-  font-family: var(--font-hero);
+.flagship-section a {
   color: rgba(0, 187, 255, 0.9);
   text-decoration: none;
+  font-weight: 600;
   transition: color 0.2s ease;
-  font-size: 1.1rem;
 }
 
-.manifesto-section a:hover {
+.flagship-section a:hover {
   color: rgba(0, 255, 170, 0.9);
   text-decoration: underline;
-}
-
-.divider {
-  width: 80%;
-  margin: 2rem auto;
-  border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .cta-section {
@@ -540,6 +624,12 @@ onMounted(() => {
   transform: translateY(-2px);
 }
 
+@media (max-width: 900px) {
+  .tenets-grid-middle {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .hero-section h1 {
     font-family: var(--font-hero);
@@ -555,6 +645,10 @@ onMounted(() => {
   }
 
   .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tenets-grid-middle {
     grid-template-columns: 1fr;
   }
 
