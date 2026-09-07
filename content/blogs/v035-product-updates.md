@@ -7,6 +7,8 @@ author: Brandon Apol
 
 Hey folks. It's been a minute since we've written one of these. Not because we stopped working — actually the opposite. We got heads-down for a few months and just built, and then looked up and realized we owed you an update. So here it is: everything worth knowing about since our last post back in April, in plain English, no engineering degree required.
 
+Quick note before we dive in: the device is now renamed to Quark.
+
 ## We Rebuilt the Plumbing
 
 The biggest thing we did this stretch, you'll never actually see directly, and that's kind of the point. Underneath Quark, there's a layer that decides how files actually get read from and written to your disk. We rewrote that whole thing from the ground up, piece by piece, over about two months. Think of it like replacing the pipes in your house while the water is still running — boring to describe, but everything downstream (photos loading, files downloading, folders opening) is faster and more dependable because of it.
@@ -34,7 +36,7 @@ We shipped a first version of a password vault — a private, encrypted place to
 
 ## We're On Your Phone Now
 
-This is probably the one you'll actually notice: Quark is now available as a real app on iOS and Android, built, signed, and shipped through the actual App Store and Google Play pipelines. [Brandon: fill in actual current availability/beta status here before publishing.]
+This is probably the one you'll actually notice: we've built a real app for iOS and Android. It's not on the App Store or Google Play yet — it's still in testing — but if you want to try it out early, reach out and we'll see if your setup is a fit.
 
 ## Backups
 
